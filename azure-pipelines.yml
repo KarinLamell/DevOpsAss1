@@ -14,14 +14,6 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'echo ''{"api_url":"$(host)","api_port":"8080"}'' >./src/properties/settings.json'
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'cat ./src/properties/settings.json'
 
 - script: |
     npm install
